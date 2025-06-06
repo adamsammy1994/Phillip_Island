@@ -6,25 +6,24 @@
   <title>Phillip Island Budget Trip Itinerary</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       max-width: 800px;
       margin: 1rem auto;
       padding: 0 1rem;
-      background: #f0f4f8;
-      color: #222;
+      background: #e8f5e9;
+      color: #2e7d32;
     }
     h1, h2 {
       text-align: center;
-      color: #2c3e50;
+      color: #1b5e20;
     }
     h2 {
       margin-top: 3rem;
     }
     .activity {
-      background: #fff;
+      background: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       padding: 1rem 1.5rem;
       margin-bottom: 1.5rem;
     }
@@ -36,9 +35,8 @@
       border: none;
     }
     strong {
-      color: #2980b9;
+      color: #388e3c;
     }
-    /* Buttons container */
     #daySelector {
       display: flex;
       justify-content: center;
@@ -50,26 +48,39 @@
       font-size: 1.1rem;
       border: none;
       border-radius: 8px;
-      background-color: #2980b9;
+      background-color: #66bb6a;
       color: white;
       cursor: pointer;
       transition: background-color 0.3s;
     }
     #daySelector button:hover {
-      background-color: #1c5980;
+      background-color: #43a047;
     }
     #daySelector button.active {
-      background-color: #1c5980;
+      background-color: #388e3c;
       font-weight: 600;
     }
-    /* Hide sections initially */
     .page {
       display: none;
+    }
+    #weather {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #weather iframe {
+      width: 100%;
+      height: 150px;
+      border: none;
     }
   </style>
 </head>
 <body>
   <h1>Phillip Island Budget Trip Itinerary (Free Activities)</h1>
+
+  <div id="weather">
+    <h2>🌤️ Live Weather in Phillip Island</h2>
+    <iframe src="https://forecast7.com/en/38d5n145d2/phillip-island/?unit=us" frameborder="0"></iframe>
+  </div>
 
   <div id="daySelector">
     <button id="btnDay1" class="active" onclick="showDay(1)">Day 1</button>
@@ -83,10 +94,7 @@
     <div class="activity">
       <h3>San Remo Pelican Feeding</h3>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.166445862659!2d145.23905121502053!3d-38.4989895854898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad4f0a71db78e27%3A0xb0ef4c3f73c0f9b7!2sSan%20Remo%20Pelican%20Feeding!5e0!3m2!1sen!2sau!4v1717670000000!5m2!1sen!2sau"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=san+remo+pelican+feeding&output=embed"
       ></iframe>
       <p>
         Watch the famous pelican feeding show at the San Remo jetty.<br />
@@ -135,10 +143,7 @@
     <div class="activity">
       <h3>Phillip Island Botanic Gardens</h3>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.470416865821!2d145.28834861500172!3d-38.49250457955524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad4f5ca096f93d9%3A0x53619b70b9f2e22a!2sPhillip%20Island%20Botanic%20Gardens!5e0!3m2!1sen!2sau!4v1717672000000!5m2!1sen!2sau"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=phillip+island+botanic+gardens&output=embed"
       ></iframe>
       <p>
         Enjoy a peaceful walk through beautiful gardens with stroller-friendly
@@ -148,47 +153,47 @@
     </div>
 
     <div class="activity">
-      <h3>Seal Rocks</h3>
+      <h3>Swan Lake Trail</h3>
       <iframe
-        src="https://www.google.com/maps?q=seal+rocks+phillip+island&output=embed"
+        src="https://www.google.com/maps?q=swan+lake+phillip+island&output=embed"
       ></iframe>
       <p>
-        Visit Seal Rocks for free to see Australian fur seals resting on the rocks by the shore. Great wildlife watching!<br />
-        <strong>Best time:</strong> Late morning to early afternoon for best light and seal activity.
+        A tranquil walk featuring bird hides overlooking the lake, ideal for observing swans, ducks, and other waterbirds in their natural habitat. The area is stroller-friendly and offers a peaceful setting for wildlife enthusiasts.<br />
+        <strong>Best time:</strong> Morning or late afternoon when wildlife is most active.
       </p>
     </div>
 
     <div class="activity">
       <h3>Red Rocks Beach</h3>
+      <iframe
+        src="https://www.google.com/maps?q=red+rocks+beach+phillip+island&output=embed"
+      ></iframe>
       <p>
         Quiet beach, stroller-accessible with tide pools and red-colored rocks.<br />
         <strong>Best time:</strong> Early afternoon, ideally near low tide to explore tide pools.
       </p>
-      <iframe
-        src="https://www.google.com/maps?q=red+rocks+beach+phillip+island&output=embed"
-      ></iframe>
     </div>
 
     <div class="activity">
       <h3>Ventnor Lookout</h3>
+      <iframe
+        src="https://www.google.com/maps?q=ventnor+beach+phillip+island&output=embed"
+      ></iframe>
       <p>
         Scenic views from the car in wet weather. Great for photos.<br />
         <strong>Best time:</strong> Mid to late afternoon for soft light and clear views.
       </p>
-      <iframe
-        src="https://www.google.com/maps?q=ventnor+beach+phillip+island&output=embed"
-      ></iframe>
     </div>
 
     <div class="activity">
       <h3>Return to Nobbies Boardwalk (Optional)</h3>
+      <iframe
+        src="https://www.google.com/maps?q=the+nobbies+boardwalk&output=embed"
+      ></iframe>
       <p>
         Enjoy another visit if the weather improves before heading home.<br />
         <strong>Best time:</strong> Evening around sunset or dusk for possible penguin sightings.
       </p>
-      <iframe
-        src="https://www.google.com/maps?q=the+nobbies+boardwalk&output=embed"
-      ></iframe>
     </div>
   </div>
 
